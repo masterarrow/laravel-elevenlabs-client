@@ -1,0 +1,56 @@
+{
+    "name": "masterarrow/laravel-elevenlabs-client",
+    "description": "Wrapper client for elevenlabs api",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ElevenLabsWrapper\\ElevenLabsClient\\": "src/"
+        },
+        "files": [
+            "src/Providers/ElevenLabsClientServiceProvider.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ElevenLabsWrapper\\ElevenLabsClient\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "role": "Author",
+            "name": "masterarrow",
+            "email": "masterarrows@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.7",
+        "illuminate/support": "^10.13"
+    },
+    "require-dev":{
+        "pestphp/pest": "^2.6",
+        "vimeo/psalm": "^5.12"
+    },
+    "scripts" : {
+        "test" : "./vendor/bin/pest"
+    },
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ElevenLabsWrapper\\ElevenLabsClient\\Providers\\ElevenLabsClientServiceProvider"
+            ]
+        }
+  }
+}
