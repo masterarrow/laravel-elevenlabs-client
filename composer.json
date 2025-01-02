@@ -51,6 +51,9 @@
             "providers": [
                 "ElevenLabsWrapper\\ElevenLabsClient\\Providers\\ElevenLabsClientServiceProvider"
             ]
+        },
+        "branch-alias": {
+            "dev-master": "0.0.1-dev"
         }
   }
 }
